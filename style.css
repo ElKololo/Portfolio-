@@ -1,0 +1,300 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ef0d0d;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Accueil */
+.Accueil {
+    text-align: center;
+    background: #ffff;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+.Accueil h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ef0d0d;
+}
+
+.social-icons a {
+    color: #ef0d0d;
+    margin: 0 10px;
+    font-size: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* À propos */
+.A-propos h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #333;
+}
+
+.timeline {
+    margin-top: 20px;
+    border-left: 3px solid #ef0d0d;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.timeline-item i {
+    font-size: 24px;
+    color: #ef0d0d;
+    margin-right: 10px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0 0 0;
+}
+
+.timeline-link {
+    color: #ef0d0d;
+    text-decoration: none;
+}
+
+.timeline-link:hover {
+    text-decoration: underline;
+}
+
+/* Compétences & Outils */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.services-box {
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.services-box i {
+    font-size: 40px;
+    color: #ef0d0d;
+    margin-bottom: 10px;
+}
+
+.services-box h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.services-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Projets */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes flexibles */
+    gap: 20px; /* Espacement entre les cartes */
+    max-width: 1200px; /* Limite la largeur totale de la grille */
+    margin: 0 auto; /* Centre la grille sur la page */
+}
+
+.project-container .project-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1; /* Forme carrée */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    max-width: 320px; /* Taille maximale de chaque carte (ajustée pour être plus carrée) */
+    margin: 0 auto; /* Centre chaque carte dans sa colonne */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-container .project-box img {
+    width: 80%; /* Réduit la taille de l'image à l'intérieur pour laisser plus d'espace au texte */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-container .project-box h3, .project-container .project-box p {
+    text-align: center;
+    font-size: 1rem; /* Taille du texte réduite pour mieux tenir dans la carte */
+    margin-top: 10px; /* Espacement entre l'image et le texte */
+}
+
+.project-container .project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Filtre des catégories */
+.project-filter {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ef0d0d; /* Rouge pour les boutons */
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: #d12a2a; /* Rouge plus foncé au survol */
+}
+
+/* Etat actif du bouton */
+.filter-btn.active {
+    background-color: #333; /* Couleur de fond pour l'état actif */
+    color: #fff;
+    transform: scale(1.05); /* Légère mise en avant */
+}
+
+/* Ajout des effets de surbrillance */
+.filter-button.active {
+    background-color: #e62d2d; /* Rouge vif pour le bouton actif */
+    color: white; /* Texte blanc sur bouton actif */
+    transform: scale(1.1); /* Légère mise en avant avec agrandissement */
+}
+
+/* NavBar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 10px;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #ef0d0d;
+    color: #fff;
+}
+
+/* Responsive Design */
+
+/* Pour les petits écrans (tablettes en portrait, petites résolutions) */
+@media (max-width: 768px) {
+    /* Mise en place d'une seule colonne pour les projets */
+    .project-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+
+    /* Ajustement des services */
+    .services-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+
+    /* Réduire la taille des titres */
+    .Accueil h1 {
+        font-size: 36px;
+    }
+
+    /* Modifier la taille des boutons de filtre */
+    .filter-btn {
+        font-size: 14px;
+    }
+}
+
+/* Très petit écran (smartphones en portrait) */
+@media (max-width: 480px) {
+    .Accueil h1 {
+        font-size: 30px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+
+    .filter-btn {
+        font-size: 14px;
+    }
+
+    /* Ajustement de la taille des images dans les projets */
+    .project-container .project-box img {
+        width: 70%; /* Plus petit pour mieux s'adapter */
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>ANDJIB Houdhayf</h1>
+        <nav class="navbar">
+            <a href="#accueil" class="nav-link active">Accueil</a>
+            <a href="#a-propos" class="nav-link">À propos</a>
+            <a href="#competences" class="nav-link">Compétences</a>
+            <a href="#outils" class="nav-link">Outils</a>
+            <a href="#projets" class="nav-link">Projets</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="Accueil">
+        <h1>Bienvenue</h1>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="a-propos" class="A-propos">
+        <h1>À propos</h1>
+        <p>
+            Je suis un étudiant passionné par les nouvelles technologies et le domaine de la cybersécurité. 
+            Mon objectif est d'acquérir de solides compétences pour évoluer dans le domaine des réseaux et de la cybersécurité.
+        </p>
+        <h2>Mes Loisirs</h2>
+        <p>
+            ⚽ Le sport, plus précisément le football, est une de mes grandes passions. J'aime pratiquer et suivre les matchs. <br>
+            🎥 Me cultiver sur la cybersécurité via des vidéos et d'autres ressources en ligne pour approfondir mes connaissances. <br>
+            💻 M'entraîner sur des plateformes comme TryHackMe et Hack The Box pour améliorer mes compétences en sécurité informatique et hacking éthique.
+        </p>
+        <h2>Mon Parcours</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <i class="fas fa-school"></i>
+                <div class="timeline-content">
+                    <h3><a href="https://www.lgtlecorbusier.org/" target="_blank" class="timeline-link">Lycée Le Corbusier Aubervilliers</a></h3>
+                    <p>Baccalauréat Technologique STI2D option SIN.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <i class="fas fa-university"></i>
+                <div class="timeline-content">
+                    <h3><a href="https://iutv.univ-paris13.fr/?sitemap" target="_blank" class="timeline-link">Université Sorbonne Paris Nord IUT de Villetaneuse</a></h3>
+                    <p>2e année de BUT Réseaux et Télécommunications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="Compétences">
+        <h2>Mes Compétences</h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fas fa-code"></i>
+                <h3>Programmation/Web</h3>
+                <p>HTML, CSS, Python, SQL</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-network-wired"></i>
+                <h3>Réseaux</h3>
+                <p>Configuration et gestion des réseaux locaux et étendus. Compréhension des différents protocoles et services (TCP/IP, DNS, DHCP, UDP, SMTP, RIP/OSPF/MPLS...)</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-lock"></i>
+                <h3>Cyber Sécurité</h3>
+                <p>Protection des données. Observation du trafic réseau, mise en place de pare-feu et règles de translation (iptables), etc.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Outils -->
+    <section id="outils" class="Outils">
+        <h2>Les Outils que j'utilise</h2>
+        <div class="services-container">
+            <div class="services-box">
+                <i class="fas fa-laptop"></i>
+                <h3>VirtualBox</h3>
+                <p>Gestion des machines virtuelles pour tester et simuler des environnements réseau.</p>
+            </div>
+            <div class="services-box">
+                <i class="fab fa-linux"></i>
+                <h3>Kali Linux</h3>
+                <p>Système d'exploitation spécialisé dans la sécurité informatique et les tests de pénétration.</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-network-wired"></i>
+                <h3>Wireshark</h3>
+                <p>Analyse et capture du trafic réseau en temps réel pour des diagnostics et tests de sécurité.</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-search"></i>
+                <h3>Nmap</h3>
+                <p>Outil de scanner réseau utilisé pour découvrir des hôtes, services et vulnérabilités sur un réseau.</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-code"></i>
+                <h3>Scapy</h3>
+                <p>Outil pour l'analyse et la manipulation de paquets réseau, utilisé pour créer des tests réseau personnalisés.</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-user-secret"></i>
+                <h3>MrHolmes</h3>
+                <p>Outil OSINT pour la collecte d'informations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="Projets">
+        <h2>Mes Projets</h2>
+        <div class="filter-buttons">
+            <button class="filter-button active" data-category="all">Tous</button>
+            <button class="filter-button" data-category="programmation">Programmation</button>
+            <button class="filter-button" data-category="reseaux">Réseaux</button>
+            <button class="filter-button" data-category="cybersecurite">Cybersécurité</button>
+            <button class="filter-button" data-category="telecommunications">Télécommunications</button>
+        </div>
+        <div class="project-container"></div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="Contact">
+        <h2>Contactez-moi</h2>
+        <div class="social-icons">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <p class="Mail">Adresse Mail : a.houdhayf@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Mon Portfolio. Tous droits réservés.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

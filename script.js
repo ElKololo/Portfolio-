@@ -9,7 +9,7 @@ const projects = [
         description: 'Dans ce projet j\'ai conçu un site web utilisant HTML, CSS, Python et une base de données CSV pour trier des données et les présenter sous forme de graphiques interactifs. Ce projet a renforcé mes compétences en développement web et en programmation Python tout en m\'apprenant à gérer un projet de manière autonome et à respecter des délais serrés.',
         category: 'programmation',
         image: 'Images/traitement_donnees.jpg',
-        link: 'https://elkololo.github.io/Traiter-des-donnees/',  // Lien vers le site du projet
+        // Lien vers le site du projet
     },
     {
         title: 'Construction d\'un réseau informatique (Mai 2024)',

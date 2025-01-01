@@ -298,3 +298,114 @@ section {
         width: 70%; /* Plus petit pour mieux s'adapter */
     }
 }
+/* Modifications pour la navbar sur mobile */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Ajustements pour petits écrans */
+@media (max-width: 480px) {
+    /* Sections générales */
+    section {
+        padding: 30px 15px;
+    }
+
+    /* Ajustements timeline */
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-item i {
+        margin-bottom: 10px;
+    }
+
+    /* Services boxes */
+    .services-box {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .services-box i {
+        font-size: 32px;
+    }
+
+    .services-box h3 {
+        font-size: 18px;
+    }
+
+    /* Projets */
+    .project-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .project-box {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .project-box img {
+        width: 90%;
+    }
+
+    /* Filtres projets */
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 5px;
+    }
+
+    .filter-button {
+        font-size: 14px;
+        padding: 8px 12px;
+        margin: 3px;
+        white-space: nowrap;
+    }
+}
+
+/* Optimisations tactiles */
+@media (hover: none) {
+    .nav-link, .services-box, .project-box, .filter-button {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-link:active, .filter-button:active {
+        background-color: #ef0d0d;
+    }
+
+    .services-box:active, .project-box:active {
+        transform: translateY(-5px);
+    }
+}
+
+/* Correction du viewport sur iOS */
+@supports (-webkit-touch-callout: none) {
+    .header {
+        position: -webkit-sticky;
+    }
+
+    section {
+        -webkit-overflow-scrolling: touch;
+    }
+}

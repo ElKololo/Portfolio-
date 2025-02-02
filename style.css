@@ -1,300 +1,286 @@
-/* Global Styles */
-body {
+/* Reset et styles de base */
+* {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
     color: #333;
-}
-
-/* Header */
-.header {
+    background-color: #f4f4f4;
+  }
+  
+  /* Header et Navigation */
+  .header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
+    padding: 0.5rem 1rem;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.navbar {
-    display: flex;
-}
-
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: #ef0d0d;
-}
-
-/* Section Styles */
-section {
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Accueil */
-.Accueil {
-    text-align: center;
-    background: #ffff;
-    color: #fff;
-    padding: 100px 20px;
-}
-
-.Accueil h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #ef0d0d;
-}
-
-.social-icons a {
-    color: #ef0d0d;
-    margin: 0 10px;
-    font-size: 30px;
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-}
-
-/* À propos */
-.A-propos h2 {
-    margin-top: 40px;
-    font-size: 28px;
-    color: #333;
-}
-
-.timeline {
-    margin-top: 20px;
-    border-left: 3px solid #ef0d0d;
-    padding-left: 20px;
-}
-
-.timeline-item {
+    height: 60px; /* Hauteur fixe pour la barre de navigation */
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.timeline-item i {
-    font-size: 24px;
-    color: #ef0d0d;
-    margin-right: 10px;
-}
-
-.timeline-content h3 {
-    font-size: 20px;
-    margin: 0;
-}
-
-.timeline-content p {
-    margin: 5px 0 0 0;
-}
-
-.timeline-link {
-    color: #ef0d0d;
+  }
+  
+  .header h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .navbar {
+    display: none;
+  }
+  
+  .nav-link {
+    color: #fff;
     text-decoration: none;
-}
-
-.timeline-link:hover {
-    text-decoration: underline;
-}
-
-/* Compétences & Outils */
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.services-box {
-    text-align: center;
-    background: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.services-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-.services-box i {
-    font-size: 40px;
-    color: #ef0d0d;
-    margin-bottom: 10px;
-}
-
-.services-box h3 {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.services-box p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Projets */
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes flexibles */
-    gap: 20px; /* Espacement entre les cartes */
-    max-width: 1200px; /* Limite la largeur totale de la grille */
-    margin: 0 auto; /* Centre la grille sur la page */
-}
-
-.project-container .project-box {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1; /* Forme carrée */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    max-width: 320px; /* Taille maximale de chaque carte (ajustée pour être plus carrée) */
-    margin: 0 auto; /* Centre chaque carte dans sa colonne */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-container .project-box img {
-    width: 80%; /* Réduit la taille de l'image à l'intérieur pour laisser plus d'espace au texte */
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-container .project-box h3, .project-container .project-box p {
-    text-align: center;
-    font-size: 1rem; /* Taille du texte réduite pour mieux tenir dans la carte */
-    margin-top: 10px; /* Espacement entre l'image et le texte */
-}
-
-.project-container .project-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Filtre des catégories */
-.project-filter {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.filter-btn {
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #ef0d0d; /* Rouge pour les boutons */
-    border: none;
-    border-radius: 5px;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.filter-btn:hover {
-    background-color: #d12a2a; /* Rouge plus foncé au survol */
-}
-
-/* Etat actif du bouton */
-.filter-btn.active {
-    background-color: #333; /* Couleur de fond pour l'état actif */
-    color: #fff;
-    transform: scale(1.05); /* Légère mise en avant */
-}
-
-/* Ajout des effets de surbrillance */
-.filter-button.active {
-    background-color: #e62d2d; /* Rouge vif pour le bouton actif */
-    color: white; /* Texte blanc sur bouton actif */
-    transform: scale(1.1); /* Légère mise en avant avec agrandissement */
-}
-
-/* NavBar Styles */
-.navbar {
-    display: flex;
-    justify-content: center;
-}
-
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    padding: 10px;
-    font-weight: bold;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 5px;
-}
-
-.nav-link:hover,
-.nav-link.active {
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
     background-color: #ef0d0d;
     color: #fff;
-}
-
-/* Responsive Design */
-
-/* Pour les petits écrans (tablettes en portrait, petites résolutions) */
-@media (max-width: 768px) {
-    /* Mise en place d'une seule colonne pour les projets */
-    .project-container {
-        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  /* Sections générales */
+  section {
+    padding: 80px 20px 50px; /* Augmentez le padding-top */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  section:target h2 {
+    color: #ef0d0d;
+    padding-top: 70px; /* Espace supplémentaire pour le titre */
+    margin-top: -70px; /* Compensation pour le padding */
+  }
+  
+  /* Accueil */
+  .Accueil {
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .Accueil h1 {
+    font-size: 2rem;
+    color: #ef0d0d;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons a {
+    color: #ef0d0d;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  /* À propos */
+  .timeline {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ef0d0d;
+  }
+  
+  .timeline-item {
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-item i {
+    color: #ef0d0d;
+    margin-right: 0.5rem;
+  }
+  
+  .timeline-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Compétences et Outils */
+  .services-container {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .services-box {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-box i {
+    color: #ef0d0d;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Projets */
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-button {
+    background: #e0d9d9;
+    color: #000000;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .project-container {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .project-box {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-box h3 {
+    padding: 1rem;
+  }
+  
+  .project-box p {
+    padding: 0 1rem 1rem;
+  }
+  
+  /* Contact */
+  .Contact {
+    text-align: center;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Media Queries pour la réactivité */
+  @media (min-width: 768px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    /* Ajustement des services */
+  
+    .navbar {
+      display: flex;
+    }
+  
+    .nav-link {
+      padding: 0 1rem;
+    }
+  
+    .menu-toggle {
+      display: none;
+    }
+  
+    .Accueil h1 {
+      font-size: 3rem;
+    }
+  
     .services-container {
-        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    /* Réduire la taille des titres */
-    .Accueil h1 {
-        font-size: 36px;
+  
+    .project-container {
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    /* Modifier la taille des boutons de filtre */
-    .filter-btn {
-        font-size: 14px;
+  }
+  
+  @media (min-width: 1024px) {
+    section {
+      padding: 4rem 2rem;
     }
-}
-
-/* Très petit écran (smartphones en portrait) */
-@media (max-width: 480px) {
-    .Accueil h1 {
-        font-size: 30px;
+  
+    .services-container {
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    .social-icons a {
-        font-size: 24px;
+  
+    .project-container {
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    .filter-btn {
-        font-size: 14px;
+  }
+  
+  /* Animations et transitions */
+  .nav-link,
+  .filter-button,
+  .services-box,
+  .project-box {
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .filter-button:hover {
+    background-color: #ef0d0d;
+  }
+  
+  .services-box:hover,
+  .project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Classes utilitaires */
+  .active {
+    background-color: #ef0d0d;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Ajustements pour les écrans larges */
+  @media (min-width: 1200px) {
+    .services-container,
+    .project-container {
+      grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
-
-    /* Ajustement de la taille des images dans les projets */
-    .project-container .project-box img {
-        width: 70%; /* Plus petit pour mieux s'adapter */
-    }
-}
+  }
+  
+  /* Style pour le bouton de filtre actif */
+  .filter-button.active {
+    background-color: #f12f2f;
+    color: #fff;
+  }
+  
+  

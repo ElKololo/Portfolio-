@@ -9,7 +9,7 @@ const projects = [
         description: 'Dans ce projet j\'ai conçu un site web utilisant HTML, CSS, Python et une base de données CSV pour trier des données et les présenter sous forme de graphiques interactifs. Ce projet a renforcé mes compétences en développement web et en programmation Python tout en m\'apprenant à gérer un projet de manière autonome et à respecter des délais serrés.',
         category: 'programmation',
         image: 'Images/traitement_donnees.jpg',
-        link: 'https://www.example.com',  // Lien vers le site du projet
+        //link: 'https://www.example.com',  // Lien vers le site du projet(bientôt)
     },
     {
         title: 'Construction d\'un réseau informatique (Mai 2024)',
@@ -37,6 +37,13 @@ const projects = [
         category: 'telecommunications',
         image: 'Images/TW.jpg',
         report: 'Rapports/SAE22.pdf' // Chemin vers le rapport PDF
+    },
+    {
+        title: 'Découvrir le pentest (Janvier 2025)',
+        description: 'J\'ai mis en place un hacklab sur VirtualBox, composé de Kali Linux et de deux machines cibles : Metasploitable2 et Windows XP. À l\'aide d\'outils comme Metasploit, Nessus, Nmap et John The Ripper, j\'ai réalisé une simulation de test d\'intrusion pour identifier, exploiter des failles et analyser la sécurité des systèmes.',
+        category: 'cybersecurite',
+        image: 'Images/pentest_img.jpg',
+        report: 'Rapports/SAE34.pdf' // Chemin vers le rapport PDF
     }
 ];
 

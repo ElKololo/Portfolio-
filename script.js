@@ -170,3 +170,15 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
+// Ajoutez ce code à la fin de votre fichier script.js existant
+
+document.addEventListener("DOMContentLoaded", () => {
+  const typewriter = document.querySelector(".typewriter")
+
+  setInterval(() => {
+    typewriter.style.animation = "none"
+    void typewriter.offsetWidth // Déclenche un reflow
+    typewriter.style.animation = null
+  }, 8000) // Réinitialise l'animation toutes les 8 secondes
+})
+

@@ -51,6 +51,14 @@ const projects = [
     image: "Images/pentest_img.jpg",
     report: "Rapports/SAE34.pdf", // Chemin vers le rapport PDF
   },
+  {
+    title: "Vérificateur de Mot de passe (Février 2025)",
+    description:
+      "Durant mon temps libre en dehors du cadre académique j'ai réalisé ce projet afin de découvrir un peu le langage JavaScript tout en restant dans le domaine de la cyber sécurité mais aussi d'apprendre en autonomie plusieurs concepts.",
+    category: "cybersecurite",
+    image: "Images/password_checker.jpg",
+    link: "https://elkololo.github.io/Kufuli_Scanner-/",
+  },
 ]
 
 // Fonction pour afficher les projets

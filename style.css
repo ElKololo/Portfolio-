@@ -622,4 +622,17 @@ section:target h2 {
 .Mail a:hover::after {
   transform: scaleX(1);
 }
+.btn-cv {
+  background-color: #00bfff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.btn-cv:hover {
+  background-color: #00bfff;
+}
 
